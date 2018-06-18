@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_forms_bootstrap',
     'posts',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +128,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+#the below is for a test email server
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+SYSTEM_EMAIL = 'support@trydjango.com' # this is a fake email as we are just trying it out, this would be the email address that the user gets his email from us.

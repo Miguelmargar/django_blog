@@ -1,6 +1,6 @@
 from django.db import models
-from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -15,6 +15,7 @@ class Post(models.Model):
     views = models.IntegerField(default=0)
     tag = models.CharField(max_length=30, blank=True, null=True)
     image = models.ImageField(upload_to="images", blank=True, null=True)
+    author   = models.ForeignKey(User, related_name='posts', null=False, default=1, on_delete=models.SET_DEFAULT)
     
     def __str__(self):
         return self.title

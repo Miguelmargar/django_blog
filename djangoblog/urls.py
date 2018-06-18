@@ -19,9 +19,11 @@ from django.conf.urls import url
 from posts import urls as posts_urls
 from django.views.static import serve
 from django.conf import settings
+from accounts import urls as accounts_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include(accounts_urls)),
     path('', include(posts_urls)),
-    url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
+    path('media/<path:path>', serve, {'document_root': settings.MEDIA_ROOT}),
 ]
