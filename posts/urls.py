@@ -6,5 +6,4 @@ urlpatterns = [
     path('<pk>/edit', edit_post, name="edit_post"),
     path('<pk>/', post_detail, name="post_detail"),
     path('', get_posts, name="get_posts"),   
-    
 ]
