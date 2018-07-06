@@ -16,7 +16,7 @@ def post_detail(request, pk):
     
 def new_post(request):
     if request.method == "POST":
-        form = BlogPostForm(request.POST, request.FILES)
+        form = BlogPostForm(request.POST, request.FILES)#request.FILES for a file such as pdf or image
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user

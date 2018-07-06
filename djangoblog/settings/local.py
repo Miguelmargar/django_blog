@@ -1,7 +1,5 @@
 from .base import *
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '7-m&(08e!ry7fh&hl9#t-vi&qgzvw2vth@ooc&a42y!t@616*m'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
